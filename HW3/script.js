@@ -140,9 +140,10 @@
 // const arr = [];
 //
 // for (;;) {
-//     let userNumber = +prompt('Введите число');
+//     let userNumber = prompt('Введите число');
 //
-//     if (userNumber) arr.push(userNumber);
+//     if (!isNaN(+userNumber) && userNumber) arr.push(+userNumber);
+//     else if (userNumber) alert('Вы ввели не число!');
 //     else break;
 // }
 //
@@ -160,7 +161,7 @@
 //     multiplicationTable[i-1] = [];
 //
 //     for (let j = 1; j < 10; j++) {
-//         multiplicationTable[i-1].push(i * j);
+//         multiplicationTable[i-1].push(`${i} x ${j} = ${i * j}`);
 //     }
 // }
 //
