@@ -152,15 +152,16 @@ setComment('2016-11-02', 'You could do it better!');
 // alert('!')  // код, время выполнения которого нужно измерить
 // alert( timer() ); // время в мкс от начала выполнения createTimer() до момента вызова timer()
 
-function createTimer(func) {
+function createTimer() {
     let t0 = performance.now();
-    func;
-    let t1 = performance.now();
-    return alert(`Время выполнения - ${t1 - t0} миллисекунд`);
+    return () => {
+        let t1 = performance.now();
+        return `Время выполнения - ${t1 - t0} миллисекунд`;
+    }
 }
 
-const timer = createTimer;
-// timer(alert('!'));
+// const timer = createTimer();
+// alert( timer() );
 
 // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 // P.S. не совсем понятно что нужно сделать в этом условии
