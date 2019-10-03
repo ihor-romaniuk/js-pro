@@ -178,7 +178,18 @@ function cube(numb, pow = 3) {
     return numb;
 }
 
+function cubeWithFor(numb) {
+    let total = numb;
+
+    for (let i = 1; i < 3; i++) {
+        total *= numb;
+    }
+
+    return total;
+}
+
 // console.log( cube(2) ); // 8
+// console.log( cubeWithFor(2) ); // 8
 
 // ------------------------------------------------------------------------------------------------------------------
 
