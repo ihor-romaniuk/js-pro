@@ -1,0 +1,34 @@
+.game-wrapper {
+    margin: 0 auto;
+    width: 650px;
+    text-align: center;
+}
+
+button {
+    padding: 3px 10px;
+    border: 1px solid #282c34;
+    border-radius: 5px;
+    color: #fafafa;
+    transition: opacity .1s linear;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: .7;
+}
+
+button:first-child {
+    background: #108018;
+}
+
+button:nth-child(2) {
+    background: #802825;
+}
+
+canvas {
+    background: rgba(255, 255, 0, 0.5);
+    border: 2px solid #000;
+    border-radius: 10px;
+    margin: 10px auto;
+    display: block;
+}
